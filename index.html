@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallax Scrolling Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">That Haunted Night</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>English Horror Story</h2>
+            <p>The night was pitch dark and the atmosphere was rather gloomy. I have absolutely no idea why I thought this was the perfect night to spend some time alone. Reflecting upon my life, thinking about how in childhood I used to promise myself that I am going to be a billionaire but here I am, at a dhaba (roadside restaurant) in the outskirts of my city travelling on my bike. Just don’t interpret something wrong from the above sentence, actually to be precise, it’s a bicycle. It was around 11:50 pm, so I started an hour’s journey back to my house thinking if I had a car, how faster it would have been. The way back home, all that I was thinking about was me as a failure but then suddenly I got a rather eerie vibe. I just thought that it was normal as I was the only person in midnight going through the woods besides a river… until it wasn’t. After some time, out of nowhere a boy appeared in front of me. I stopped my bike beside him and went towards him. Normally under these circumstances, any boy would have been scared to hell, but this particular boy had something special about him. He stood all alone in the dark at a corner without even hesitating about his surroundings. I asked him what was he doing here. To my surprise the boy spoke a thing which was a bit hard to digest. He told me that his parents were travelling in a bus and forgot him here. The first thing which came to my mind was that how can parents forget their own child on such a frightening street. A few more thoughts followed my first one. Like maybe the child was just bluffing, but then I thought that what a 6-year-old child, who is blinded from 1 eye, would earn from lying. There were many questions in my mind at that moment, but then I neglected all the thoughts that occurred to me and told myself that right now my first priority was to take this child back to his parents and ensure his safety. I immediately knew that this was the reason why I chose this particular night for self-reflection and self-pity.<br><br>
+                I knew that God had directed me to this unfortunate event in the child’s life and my job was to take this innocent child back to protection. I offered him a seat on my bicycle and told him not to worry as I will be taking you back to your parents but at that moment I realized that I did not know the address, so I turned around and asked him about his home address, but he gave me a confused look from which I got to know that he did not know the address of his house. At that moment I thought that we were in a fix, but then the idea of taking him to a police station struck my mind. I told the child not to worry and hold me tightly so that he doesn’t fall. I gave him the good news that soon he would be with his family but shockingly even after hearing this news, not a glimpse of happiness on his face; it was as if he had not even heard what I said. I certainly thought that he would be elated after hearing this but it was quite the opposite. Ignoring this reaction of his, I moved on but then came the terrifying part of the journey. Slowly and steadily the bike started getting heavier and I started losing my balance. It was not long before I fell down. I quickly turned back to see if the kid was safe but to my surprise, he wasn’t there. It was as if he had disappeared into thin air. I looked all around, I even searched the woods to some extent but he just vanished. I started wondering what just happened as my brain was not able to process this. I thought that how can he just disappear in front of my eyes, but then something else happened. Something which made me doubt reality and my existence. A small elephant was near the bank of the river splashing water on itself. The only things that were not in place except the fact that I had just searched that place… was that the elephant which played happily in the water didn’t have an eye.</p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll',function(){
+                let value = window.scrollY;
+                stars.style.left = value*0.25 + 'px';
+                moon.style.top = value*1.05 + 'px';
+                mountains_behind.style.top = value*0.05 + 'px';
+                mountains_front.style.top = value*0  + 'px';
+                text.style.marginRight = value*4 + 'px';
+                text.style.marginTop = value*1.5 + 'px';
+                btn.style.marginTop = value*1.5 + 'px';
+                header.style.top = value*0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
